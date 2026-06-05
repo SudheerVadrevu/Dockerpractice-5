@@ -2,7 +2,7 @@ ARG version
 FROM almalinux:${version:-9.2}
 ARG sudheer=lazyboy
 ARG vineela=hardwomen
-ARG train=nandedexpress
+ARG train=circarexpress
 ENV train=${train}
 RUN echo "sudheer is ${sudheer} vineela is ${vineela} train is ${train} "
 CMD ["sleep", "100"]
