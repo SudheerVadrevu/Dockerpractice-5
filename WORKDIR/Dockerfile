@@ -1,4 +1,4 @@
 FROM almalinux:9
 RUN mkdir sunset
-RUN cd /sunset
+WORKDIR sunset
 CMD [ "sleep", "100" ]
