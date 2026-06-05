@@ -2,7 +2,8 @@ ARG version
 FROM almalinux:${version:-9.2}
 ARG sudheer=lazyboy
 ARG vineela=hardwomen
-ENV train=nandedexpress
+ARG train=nandedexpress
+ENV train=${train}
 RUN echo "sudheer is ${sudheer} vineela is ${vineela} train is ${train} "
 CMD ["sleep", "100"]
 # How can you check the version of OS in server? cat /etc/*release
