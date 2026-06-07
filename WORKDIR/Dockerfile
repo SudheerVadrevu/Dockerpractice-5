@@ -1,4 +1,4 @@
 FROM almalinux:9
 RUN mkdir donga
-RUN cd /donga
+WORKDIR /donga
 CMD [ "sleep", "90" ]
