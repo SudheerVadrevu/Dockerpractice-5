@@ -6,5 +6,5 @@ RUN chown expense:expense -R /opt/server
 WORKDIR /opt/server
 COPY package.json .
 COPY *.js /opt/server/
-RUN install npm
+RUN  npm install
 CMD ["node", "index.js"]
