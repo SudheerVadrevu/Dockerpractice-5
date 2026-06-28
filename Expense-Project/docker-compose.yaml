@@ -4,6 +4,7 @@ networks:
    name: jajikaya
 volumes:
   lolipop:
+  external: true
 
 services:
    mysql:
