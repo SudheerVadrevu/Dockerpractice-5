@@ -2,11 +2,17 @@ name: expense
 networks:
  default:
    name: jajikaya
+volumes:
+  lolipop:
 
 services:
    mysql:
      image: expense-database:v.10.0
      container_name: mysql
+     volumes:
+     - source: lolipop
+       target: /var/lib/mysql
+       type: volume
    backend:
      image: expense-backend:v.10.0
      container_name: backend
