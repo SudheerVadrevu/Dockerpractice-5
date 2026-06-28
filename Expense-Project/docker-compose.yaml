@@ -7,12 +7,12 @@ services:
 
   mysql:
     
-    image: mysql.v.10.0
+    image: expense-mysql.v.10.0
     container_name: mysql
 
   backend:
 
-    image: backend.v.10.0
+    image: expense-backend.v.10.0
     container_name: backend
     ports:
       - 8080:8080
@@ -20,7 +20,7 @@ services:
       - mysql
   
   frontend:
-    image: frontend.v.10.0
+    image: expense-frontend.v.10.0
     container_name: frontend
     ports:
       - 80:80
