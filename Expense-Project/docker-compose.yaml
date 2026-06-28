@@ -7,7 +7,7 @@ services:
 
   mysql:
     
-    image: expense-mysql.v.10.0
+    image: expense-database.v.10.0
     container_name: mysql
 
   backend:
