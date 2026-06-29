@@ -2,17 +2,23 @@ name: expense
 networks:
   default:
    name: sundari
+volumes:
+  sudheer:
 
 services:
 
   mysql:
     
-    image: expense-database:v.10.0
+    image: expense-database:0.0
     container_name: mysql
+    volumes:
+      - source: sudheer
+        target: /var/lib/mysql
+        type: volume
 
   backend:
 
-    image: expense-backend:v.10.0
+    image: expense-backend:0.0
     container_name: backend
     command: sh -c "sleep 98 && node /opt/server/index.js"
     ports:
@@ -21,7 +27,7 @@ services:
       - mysql
   
   frontend:
-    image: expense-frontend:v.10.0
+    image: expense-frontend:0.0
     container_name: frontend
     ports:
       - 80:80
