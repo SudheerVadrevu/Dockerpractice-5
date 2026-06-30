@@ -1,4 +1,4 @@
--name: expense
+name: expense
 networks:
   default:
     name: Rajahmundry
