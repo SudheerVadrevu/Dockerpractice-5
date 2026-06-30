@@ -2,12 +2,17 @@ name: expense
 networks:
   default:
     name: Rajahmundry
-  
+volumes:
+    name: vijaywada
 services:
 
    mysql:
     image: expense-database:0.0
     container_name: mysql
+    volumes:
+      - source: vijaywada
+        target: /var/lib/mysql
+        type: volumes
 
    backend:
     image: expense-backend:0.0
