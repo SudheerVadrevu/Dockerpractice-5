@@ -4,7 +4,7 @@ networks:
     name: Rajahmundry
 volumes:
     vijaywada:
-    external: true
+      external: true
 services:
 
    mysql:
