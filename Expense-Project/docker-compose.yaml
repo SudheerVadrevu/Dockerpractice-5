@@ -1,0 +1,24 @@
+name: expense
+networks:
+  default:
+    name: vedurpaka
+
+services:
+
+    mysql:
+      image: expense-database:0.0
+      container_name: mysql
+
+    backend:
+      image: expense-backend:0.0
+      container_name: backend
+      depends_on:
+       - mysql
+    
+    frontend:
+      image: expense-frontend:0.0
+      container_name: frontend
+      depends_on:
+       - backend
+      ports:
+       - 80:80
