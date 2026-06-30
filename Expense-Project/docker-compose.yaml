@@ -3,7 +3,7 @@ networks:
   default:
     name: Rajahmundry
 volumes:
-   vijaywada
+    vijaywada:
 services:
 
    mysql:
