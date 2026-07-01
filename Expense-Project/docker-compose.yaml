@@ -4,6 +4,7 @@ networks:
     name: vedurpaka
 volumes:
   spyder:
+    external: true
 
 services:
 
