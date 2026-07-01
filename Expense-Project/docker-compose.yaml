@@ -2,12 +2,18 @@ name: expense
 networks:
   default:
     name: vedurpaka
+volumes:
+  spyder:
 
 services:
 
     mysql:
       image: expense-database:0.0
       container_name: mysql
+      volumes:
+       - source: spyder
+         target: /var/lib/mysql
+         type: volume
 
     backend:
       image: expense-backend:0.0
