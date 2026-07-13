@@ -1,4 +1,4 @@
-FROM node:20.20.2-alpine3.22
+FROM node:20
 EXPOSE 8080
 ENV DB_HOST=mysql
 RUN addgroup -S expense && adduser -S expense -G expense
