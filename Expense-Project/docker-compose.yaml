@@ -9,7 +9,8 @@ volumes:
 services:
 
     mysql:
-      image: expense-database:0.0
+      #image: expense-database:0.0
+      image: sudheer1995/mysql:0.0
       container_name: mysql
       volumes:
        - source: spyder
@@ -17,14 +18,16 @@ services:
          type: volume
 
     backend:
-      image: expense-backend:0.0
+      #image: expense-backend:0.0
+      image: sudheer1995/backend:0.0
       container_name: backend
       command: sh -c "sleep 25 && node /opt/server/index.js"
       depends_on:
        - mysql
     
     frontend:
-      image: expense-frontend:0.0
+      #image: expense-frontend:0.0
+      image: sudheer1995/frontend:0.0
       container_name: frontend
       depends_on:
        - backend
